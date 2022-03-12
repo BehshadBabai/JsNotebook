@@ -3,6 +3,8 @@ import { useState, useEffect, useRef } from 'react';
 import { unpkgPathPlugin } from './plugins/unpackagePathPlugin';
 import { fetchPlugin } from './plugins/fetchPlugin';
 import ReactDom from 'react-dom';
+import CodeEditor from './components/codeEditor';
+import 'bulmaswatch/superhero/bulmaswatch.min.css';
 
 const App = () => {
   
@@ -66,7 +68,9 @@ const App = () => {
     </html>
   `;
   
-  return <div>
+  return (
+  <div>
+    <CodeEditor initialValue='const a = 1;' onChange={(value)=>{setInput(value)}}/>
     <textarea value={input} onChange={(e)=>{
       setInput(e.target.value);
     }}></textarea>
@@ -74,7 +78,7 @@ const App = () => {
       <button onClick={handleClick}>Submit</button>
     </div>
     <iframe title='Preview' srcDoc={html} sandbox='allow-scripts' ref={iframe}/>
-  </div>
+  </div>)
 }
 
 ReactDom.render(<App />,document.querySelector('#root'))
