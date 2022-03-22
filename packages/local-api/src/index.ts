@@ -1,3 +1,4 @@
+#!usr/bin/env node
 import express from 'express';
 import { createProxyMiddleware } from 'http-proxy-middleware';
 import path from 'path';
@@ -22,7 +23,9 @@ export const serve = (
       })
     );
   } else {
-    const pkgPath = require.resolve('local-client/build/index.html');
+    const pkgPath = require.resolve(
+      '@behshad-jsnotebook/local-client/build/index.html'
+    );
     app.use(express.static(path.dirname(pkgPath)));
   }
 

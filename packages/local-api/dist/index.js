@@ -19,7 +19,7 @@ var serve = function (port, filename, dir, useProxy) {
         }));
     }
     else {
-        var pkgPath = require.resolve('local-client/build/index.html');
+        var pkgPath = require.resolve('@behshad-jsnotebook/local-client/build/index.html');
         app.use(express_1.default.static(path_1.default.dirname(pkgPath)));
     }
     return new Promise(function (resolve, reject) {
