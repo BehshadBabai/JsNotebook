@@ -1,5 +1,5 @@
 {
-  "name": "@behshad-jsnotebook/local-api",
+  "name": "@jsnotebook-behshad/local-api",
   "version": "1.0.0",
   "main": "dist/index.js",
   "files": [
@@ -26,6 +26,6 @@
     "cors": "^2.8.5",
     "express": "^4.17.3",
     "http-proxy-middleware": "^2.0.4",
-    "@behshad-jsnotebook/local-client": "^0.1.0"
+    "@jsnotebook-behshad/local-client": "^0.1.0"
   }
 }

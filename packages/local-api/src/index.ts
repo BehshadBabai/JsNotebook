@@ -23,7 +23,7 @@ export const serve = (
     );
   } else {
     const pkgPath = require.resolve(
-      '@behshad-jsnotebook/local-client/build/index.html'
+      '@jsnotebook-behshad/local-client/build/index.html'
     );
     app.use(express.static(path.dirname(pkgPath)));
   }

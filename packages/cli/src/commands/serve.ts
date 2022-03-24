@@ -1,6 +1,6 @@
 import path from 'path';
 import { Command } from 'commander';
-import { serve } from '@behshad-jsnotebook/local-api';
+import { serve } from '@jsnotebook-behshad/local-api';
 
 const isProduction = process.env.NODE_ENV === 'production';
 
