@@ -6,5 +6,8 @@
   },
   "scripts": {
     "start": "lerna run start --parallel"
+  },
+  "dependencies": {
+    "react": "^17.0.2"
   }
 }
