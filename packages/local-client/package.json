@@ -7,6 +7,10 @@
   "files": [
     "build"
   ],
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
   "devDependencies": {
     "@monaco-editor/react": "3.7.5",
     "@testing-library/jest-dom": "^5.16.2",
@@ -27,8 +31,6 @@
     "localforage": "^1.10.0",
     "monaco-editor": "^0.33.0",
     "prettier": "^2.5.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
     "react-redux": "7.2.2",
     "react-resizable": "^3.0.4",
     "react-scripts": "5.0.0",

@@ -15,8 +15,60 @@ interface CellState {
 const initialState: CellState = {
   loading: false,
   error: null,
-  order: [],
-  data: {},
+  order: ['123456', '123457', '123458'],
+  data: {
+    '123456': {
+      id: '123456',
+      content: `## Behshad's JavaScript Notebook
+This is an interactive coding environment. You can write JavaScript, see it executed, and write comprehensive documentation using markdown.
+
+- Click any text cell (including this one) to edit it
+- The code in each code editor is all joined together into one file. If you define a variable in cell #1, you can refer to it in a following cell!
+- You can show any react component, string, number, or anything else by calling the \`show\` function. This is a function built into this environment.
+- Re-order or delete cells using the buttons on the top right
+- Add new cells by hovering on the divider between each cell
+
+All of your changes get saved to the file you opened JsNotebook with. So, if you ran \`npx jsnotebook-behshad serve test.js\`, all of the text and code you write will be saved to the \`test.js\` file.`,
+      variant: 'text',
+    },
+    '123457': {
+      id: '123457',
+      content: `// Creating a React Component and showing it!
+      const MyComponent = () => {
+        return (
+          <button
+            onClick={() => {
+              document.querySelector('#root').parentElement.parentElement.style =
+                'background-color: red; color: white';
+            }}
+          >
+            Click Me
+          </button>
+        );
+      };
+      
+      show(MyComponent);
+      `,
+      variant: 'code',
+    },
+    '123458': {
+      id: '123458',
+      content: `// Creating a parent component and showing the previous component inside!
+      const App = () => {
+        return (
+          <div>
+            <h1>This is App!</h1>
+            <hr />
+            <MyComponent />
+          </div>
+        );
+      };
+      
+      show(App);
+      `,
+      variant: 'code',
+    },
+  },
 };
 
 const reducer = produce((state, action: Action) => {
