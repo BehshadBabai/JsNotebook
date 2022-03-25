@@ -1,6 +1,6 @@
 {
   "name": "jsnotebook-behshad",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "",
   "files": [
     "dist"
@@ -17,10 +17,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@jsnotebook-behshad/local-client": "^1.0.0"
+    "@jsnotebook-behshad/local-client": "^1.1.0"
   },
   "devDependencies": {
-    "@jsnotebook-behshad/local-api": "^1.0.0",
+    "@jsnotebook-behshad/local-api": "^1.1.0",
     "@types/node": "^17.0.22",
     "commander": "^9.1.0",
     "esbuild": "0.8.26",
